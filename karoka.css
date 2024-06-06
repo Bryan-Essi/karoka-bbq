@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+}
+
+nav {
+    background-color: brown;
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 70%;
+    /* padding: 0 80px; */
+    font-weight: bold;
+
+    /* text-align: center; */
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    display: flex;
+    gap: 1%;
+   /*  height: 16px; */
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+ /*    margin: 0 5px; */
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover {
+    background: burlywood;
+    transition: .5s;
+}
+
+.checkbtn {
+   font-size: 30px; 
+   color: white;
+   /* float: right;
+   line-height: 80px;
+   margin-right: 40px; */
+   cursor: pointer;
+   display: none;
+}
+
+#check {
+    display: none;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    position: relative;
+    background-color: black;
+}
+.background::before {
+  content: '';
+  background-image: url(images/burger.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  line-height: 2.5em;
+}
+
+.part1 h4 {
+    font-family: "Dancing Script", cursive;
+    color: brown;
+    font-size: 2.5em;
+}
+.part1 h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #ff8906;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background-color: #f2f4f6;
+    /* height: 100em; */
+    width: 100vw;
+}
+.box {
+    border: 1.5px solid rgb(247, 181, 16);
+    height: 20em;
+    width: 20em;
+    padding: 1em 0 0 1em;
+    /*  */
+}
+.box img {
+    width: 20em;
+    height: 20em;  
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+}
+.text h2 {
+    font-family: "Dancing Script", cursive;
+    color: brown;
+    font-size: 2em;
+    font-weight: bold;
+}
+.text p {
+    font-size: 1.5em;
+}
+
+@media (max-width: 980px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    .box {
+        height: 15em;
+        width: 15em;
+    }
+    .box img {
+        width: 15em;
+        height: 15em;  
+    }
+    .text {
+        line-height: 1.5em;
+    }
+    .text p {
+        font-size: 1em;
+    }
+}
+@media (max-width: 858px) {
+    .checkbtn {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        gap: 1em;
+        position: fixed;
+        width: 100%;
+        background: #000000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+     }
+     nav ul li {
+        display: block;
+        /* margin: 50px 0; */
+        line-height: 30px;
+     }
+     nav ul li a {
+        font-size: 20px;
+     }
+     a:hover,a.active {
+        background: none;
+        color: #ff8906;
+     }
+     #check:checked ~ ul {
+        left: 0;
+     }
+}
+
+
