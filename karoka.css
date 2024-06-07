@@ -14,7 +14,7 @@ body {
 
 nav {
     background-color: brown;
-    height: 80px;
+    height: 70px;
     width: 100vw;
     display: flex;
     gap: 80px;
@@ -38,8 +38,8 @@ nav ul {
     margin-right: 20px;
     display: flex;
     gap: 1%;
-   /*  height: 16px; */
 }
+
 nav ul li {
     display: inline-block;
     line-height: 80px;
@@ -83,7 +83,7 @@ a.active,a:hover {
 }
 .background::before {
   content: '';
-  background-image: url(images/burger.png);
+  background-image: url(images/pexels-victorfreitas-744780.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,21 +122,24 @@ a.active,a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 4em;
     background-color: #f2f4f6;
     /* height: 100em; */
     width: 100vw;
+    padding-top: 2em;
 }
 .box {
     border: 1.5px solid rgb(247, 181, 16);
     height: 20em;
-    width: 20em;
+    width: 29em;
     padding: 1em 0 0 1em;
     /*  */
 }
 .box img {
-    width: 20em;
-    height: 20em;  
+    width: 25em;
+    height: 20em;
+    object-fit: cover; 
+    width: fit-content;
 }
 .text {
     display: flex;
@@ -150,7 +153,70 @@ a.active,a:hover {
     font-weight: bold;
 }
 .text p {
-    font-size: 1.5em;
+    font-size: 0.9em;
+}
+
+
+main {
+    width: 100vw;
+    /* height: 100vh; */
+    padding: 5em;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.groupe1 {
+    display: flex;
+    /* flex-direction: column; */
+    height: 25em;
+    width: 50vw;
+}
+.groupe1 img {
+    width: 50vw;
+    height: 20em;
+    object-fit: cover;
+    cursor: pointer;
+}
+.groupe1 img:hover {
+    /* transform: translateY(-1.5Rem);
+    transition: .8s; */
+}
+.about > .hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    line-height: 0.5em;
+    width: 50vw;
+    height: 25em;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #333;
+}
+.phone p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    padding-top: 1em;
+}
+.about-us {
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 6em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: ; */
 }
 
 @media (max-width: 980px) {
