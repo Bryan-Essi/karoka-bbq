@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     padding: 0;
@@ -103,7 +103,7 @@ a.active,a:hover {
   color: white;
   opacity: 1;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   line-height: 2.5em;
 }
 
@@ -124,7 +124,6 @@ a.active,a:hover {
     justify-content: center;
     gap: 4em;
     background-color: #f2f4f6;
-    /* height: 100em; */
     width: 100vw;
     padding-top: 2em;
 }
@@ -166,34 +165,94 @@ main {
 .menu {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
+    gap: 5em;
 }
 .groupe1 {
     display: flex;
-    /* flex-direction: column; */
-    height: 25em;
+    height: fit-content;
     width: 50vw;
+    overflow: hidden;
+    /* background-color: #333; */
+    border-radius: 1em;
 }
-.groupe1 img {
-    width: 50vw;
+.groupe1 > div {
+    /* background-color: beige; */
+    /* border: solid 2px rgb(202, 60, 60); */
+    z-index: 0;
+    width: 33.33%;
     height: 20em;
-    object-fit: cover;
     cursor: pointer;
+    transition: 400ms;
+    position: relative;
+    margin-bottom: 4em;
 }
-.groupe1 img:hover {
-    /* transform: translateY(-1.5Rem);
-    transition: .8s; */
+.groupe1 > div:hover {
+    transform: translateY(-1.5Rem);
+    transition: .8s;
+    top: 1.5em;
+    z-index: 2;
+    position: relative;
+    width: 50%; 
 }
-.about > .hours{
+.groupe1 > div img{
+    height: 100%;
+    width: 20em;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 1em;
+    transition: 400ms;
+}
+
+.groupe1 > div img:hover{
+    width: 25em;
+    position: relative;
+}
+
+.about > .hours {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2em;
-    line-height: 0.5em;
-    width: 50vw;
+    position: relative;
+    width: 40vw;
     height: 25em;
+    /* background-color: linear-gradient(90deg, #e1eec3 0%, #f05053 100%); */
+}
+
+.hours::before {
+    content: '';
+    background-image: url(images/pexels-leeloothefirst-4886942.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.opacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 23em;
+    width: 20em;
+    border-radius: 2em;
+    border: solid 2px #333;
+    gap: 2em;
+    color: #f2f4f6;
+    /* opacity: 1; */
+    line-height: 0.5em;
+    background-color: #333;
+    opacity: 0.5;
+}
+
+.hours span {
+    color: red;
 }
 
 hr {
@@ -226,7 +285,6 @@ hr {
         display: flex;
         align-items: center;
     }
-
     nav ul li a {
         font-size: 16px;
     }
@@ -265,7 +323,6 @@ hr {
      }
      nav ul li {
         display: block;
-        /* margin: 50px 0; */
         line-height: 30px;
      }
      nav ul li a {
@@ -278,6 +335,23 @@ hr {
      #check:checked ~ ul {
         left: 0;
      }
+     .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .about > .hours {
+        width: 80vw;
+        height: 25em;
+    }
+    .groupe1 {
+        width: 80vw;
+        overflow: hidden;
+        border-radius: 1em;
+    }
+    .part2 {
+        gap: 2.5em;
+    }
 }
 
 
